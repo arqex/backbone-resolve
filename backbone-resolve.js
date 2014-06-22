@@ -19,10 +19,10 @@
 	 * @return {Object}      this
 	 */
 	Events.resolve = function(name/* , arg1, ..., argN */){
-		// make sure we have a resoved array
+		// make sure we have a resolved array
 		this._resolved || (this._resolved = {});
 
-		// Any aditional parameter is usde as argument for the callbacks
+		// Any aditional parameter is used as argument for the callbacks
 		var parameters = Array.prototype.slice.call(arguments, 1);
 
 		// Store the parameter values of the resolved event

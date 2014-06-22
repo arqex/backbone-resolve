@@ -3,7 +3,7 @@ backbone-resolve
 
 Backbone-resolve adds permanent events to Backbone.js. [Permanent events](http://arqex.com/900/permanent-events-javascript) are a special kind, after they have been triggered any listener added to them get inmediately executed.
 
-Backbone-resolve extend the Backbone.Events object with a method ```resolve``` that define a permanent event. Any listener added to an event that is resolved is getting automatically called, like if the event was triggered in that same instant. An example
+Backbone-resolve extend the Backbone.Events object with a method ```resolve``` that defines a permanent event. Any listener added to a resolved event is getting automatically called, like if the event was triggered in that same instant. An example
 ```javascript
 // First, extend our object with events
 // thanks to underscore
@@ -26,7 +26,7 @@ myobject.on('ready', function(){
 // Console will show 'I was bound after the event was resolved.'
 ```
 
-Extending the Backbone's Event module, backbone-resolve can be used out of the box with BB Models and Views.
+Extending the Backbone's Event module, backbone-resolve can be used out-of-the-box with BB Models and Views.
 ```javascript
 var mymodel = new Backbone.Model();
 
@@ -60,7 +60,7 @@ myobject.on('argument:test', function(arg1, arg2){
 // Console will show 'Hello and bye world.'
 ```
 
-You can use usual Backbone ```on```, ```once```, ```listenTo``` and ```listenToOnce``` methods to bind listener to permantent events.
+You can use usual Backbone ```on```, ```once```, ```listenTo``` and ```listenToOnce``` methods to bind listeners to permantent events.
 
 If there is a point that the event data is not valid anymore, the permanent events can be discarded using the method ```discard```. After using it, following added listener will not be executed inmediately.
 ```javascript
